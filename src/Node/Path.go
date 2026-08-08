@@ -70,13 +70,9 @@ func Extname(p string) string {
 	return filepath.Ext(p)
 }
 
-func Sep() string {
-	return string(os.PathSeparator)
-}
+var Sep = string(os.PathSeparator)
 
-func Delimiter() string {
-	return string(os.PathListSeparator)
-}
+var Delimiter = string(os.PathListSeparator)
 
 func Parse(p string) map[string]interface{} {
 	dir := filepath.Dir(p)

@@ -3,6 +3,7 @@ module Test.Main where
 import Prelude
 
 import Effect (Effect)
+import Effect.Console (log)
 import Node.Path (basename, basenameWithoutExt, concat, delimiter, dirname, extname, normalize, parse, relative, resolve, sep)
 import Test.Assert (assert, assertEqual)
 
@@ -32,3 +33,5 @@ main = do
   path1 <- resolve ["a"] ""
   path2 <- resolve ["a"] "."
   assertEqual { actual: path1, expected: path2 }
+  
+  log "Tests passed 🎉"
